@@ -1,0 +1,80 @@
+*, *:before,*:after {
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+figure{
+    width: 500px;
+    height: 150px;
+    background: linear-gradient(#e66465, #9198e5);
+    /* background-color: darkgrey; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    border-radius: 10% 0;
+    transition: .8s;
+}
+figure h1{
+    transition:.8s;
+    transform: translateY(20px);
+}
+figure h2{
+    transition:.8s;
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+}
+figure::before{
+    content: '';
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    left: 5%;
+    bottom: 5%;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    transition: .8s;
+    transform: scaleX(0);
+}
+figure:hover::before,
+figure:hover::after{
+    transform: scale(1);
+}
+figure::after{
+    content: '';
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    left: 5%;
+    bottom: 5%;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    transition: .8s;
+    transform: scaleY(0);
+}
+figure:hover::before,
+figure:hover::after{
+    transform: scale(1);
+}
+figure:hover h1,
+figure:hover h2{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+figure:hover{
+    transition: .8s;
+
+    box-shadow: 0 0 7px 5px rgba(228, 133, 228, 0.774);
+}
+/* #time_text{
+    /* padding: 30px; */
+    
+    /* text-align: center; */
+/* } */
