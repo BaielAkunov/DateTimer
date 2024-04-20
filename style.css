@@ -6,6 +6,7 @@ body{
     padding: 0;
     display: flex;
     justify-content: center;
+    font-family: monospace;
 }
 figure{
     width: 500px;
@@ -37,8 +38,8 @@ figure::before{
     right: 5%;
     left: 5%;
     bottom: 5%;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
+    border-top: 2px solid yellow;
+    border-bottom: 2px solid yellow;
     transition: .8s;
     transform: scaleX(0);
 }
@@ -53,8 +54,8 @@ figure::after{
     right: 5%;
     left: 5%;
     bottom: 5%;
-    border-left: 1px solid;
-    border-right: 1px solid;
+    border-left: 2px solid yellow;
+    border-right: 2px solid yellow;
     transition: .8s;
     transform: scaleY(0);
 }
